@@ -1,0 +1,14 @@
+@import './custom-variables';
+
+.main-svg{
+    background: transparent !important;
+  .js-line {
+    stroke: $brand-success !important; // Зеленый цвет линии
+    stroke-width: 4px !important; // Толщина линии
+  }
+  
+}
+.rangeslider-bg{
+   
+    fill: $bg-color !important;
+}

@@ -1,0 +1,134 @@
+@import './custom-variables';
+
+.mx-listview > ul > li {
+    transition: all 0.3s 0s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: initial;
+    padding: 16px;
+    background-color: transparent;
+    /* border-top: 1px solid #ced0d3; */
+}
+
+.card {
+    border: 0;
+    border-radius: 4px;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.mx-listview .selected {
+    background:transparent;
+}
+
+.modal-content {
+   
+    background-color: rgb(29, 32, 30);
+ 
+}
+
+
+
+.region-sidebar .mx-navigationtree .navbar-inner > ul > li a.active {
+    color: #fff;
+    border-left-color: #fff;
+    background-color: #049227;
+}
+
+.region-sidebar .mx-navigationtree .navbar-inner > ul > li a:hover, .region-sidebar .mx-navigationtree .navbar-inner > ul > li a:focus, .region-sidebar .mx-navigationtree .navbar-inner > ul > li a.active {
+    color: #fff;
+    background-color: #187c31;
+}
+
+.table .th {
+
+    background-color: rgb(29, 34, 30);
+ 
+}
+.table {
+  
+     background-color: rgb(29, 34, 30);
+}
+
+.table-hover .tr:hover > .td {
+    background-color: #4b5050;
+}
+
+.region-sidebar .mx-navigationtree li.mx-navigationtree-has-items > ul li a.active {
+    background-color: rgb(13 62 23);
+}
+.region-sidebar .mx-navigationtree li.mx-navigationtree-has-items > ul li a {
+    background-color: #221d1d;
+}
+
+
+
+.music-player2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: linear-gradient(135deg, rgba(18,18,18,255), rgba(0,0,0,255));
+    border-top: 1px solid rgba(4, 146, 39, 0.3);
+    padding: 30px 0;
+    box-sizing: border-box;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.music-player2 {
+    animation: showPlayer 0.5s ease 2s forwards; /* 2s задержка */
+}
+@keyframes showPlayer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Показываем плеер только когда страница полностью загружена */
+
+.music-player2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #049227, transparent);
+    opacity: 0.6;
+}
+
+@media (max-width: 768px){
+    .responsive-text{
+        font-size: 5px;
+    }
+  
+}
+
+
+// .swal2-popup .swal2-toast .swal2-icon-success .animate__animated .animate__bounceInLeft {
+//     margin-bottom: 25% !important;
+//     background-color: #221d1d !important;
+// }/* Тема для всех тостов */
+// .swal2-container {
+//   --swal2-toast-background: #111827;
+//   --swal2-title-color:      #F9FAFB;
+//   --swal2-timer-progress-bar-background: #34D399;
+// }
+
+/* Ширину и дисплей всё равно лучше добивать отдельно */
+.swal2-container .swal2-popup.swal2-toast {
+   margin-bottom: 25% !important;
+   background-color: #221d1d;
+   color: white;
+}
+
+.swal2-icon .swal2-info .swal2-icon-show{
+    color: green;
+}
+
+
+.empty-lists .mx-listview-empty{
+    display: none;
+}
